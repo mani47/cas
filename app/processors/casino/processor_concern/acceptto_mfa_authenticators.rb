@@ -2,7 +2,7 @@ require 'addressable/uri'
 
 module CASino
   module ProcessorConcern
-    module AccepttoMfaAuthenticators
+    module TwoFactorAuthenticators
       class ValidationResult < CASino::ValidationResult; end
 
       def validate_one_time_password(otp, authenticator)

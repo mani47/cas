@@ -1,4 +1,5 @@
 CASino::Engine.routes.draw do
+
   resources :sessions, only: [:index, :destroy]
   resources :two_factor_authenticators, only: [:new, :create, :destroy]
 
@@ -6,6 +7,7 @@ CASino::Engine.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#logout'
   post 'validate_otp' => 'sessions#validate_otp'
+  get 'mfa/callback' => 'sessions#mfa_callback'
 
   get 'destroy-other-sessions' => 'sessions#destroy_others'
 
@@ -14,7 +16,7 @@ CASino::Engine.routes.draw do
 
   get 'proxyValidate' => 'proxy_tickets#proxy_validate'
   get 'proxy' => 'proxy_tickets#create'
-
+  
   # api
   scope '/cas' do
     scope module: :api, as: :api do
@@ -26,7 +28,7 @@ CASino::Engine.routes.draw do
     end
   end
 
-  root to: redirect('/login')
+  root to: 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

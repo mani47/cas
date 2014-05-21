@@ -2,6 +2,7 @@ class CASino::SessionsController < CASino::ApplicationController
   include CASino::SessionsHelper
 
   def index
+    processor(:AccepttoMfaAuthenticatorOverview).process(cookies, request.user_agent)
     processor(:TwoFactorAuthenticatorOverview).process(cookies, request.user_agent)
     processor(:SessionOverview).process(cookies, request.user_agent)
   end
@@ -28,5 +29,9 @@ class CASino::SessionsController < CASino::ApplicationController
 
   def validate_otp
     processor(:SecondFactorAuthenticationAcceptor).process(params, request.user_agent)
+  end
+  
+  def mfa_callback
+    processor(:AccepttoMfaAuthenticationActivator).process(params, cookies, request.user_agent)
   end
 end

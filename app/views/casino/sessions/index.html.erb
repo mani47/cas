@@ -14,6 +14,16 @@
       <%= image_tag "logo.png" %>
     </div>
 
+
+	  <h3>
+        <%= t('acceptto_mfa_authenticator.title')%>
+	  </h3>
+	  <% if @acceptto_mfa_authenticator.blank? %>
+        <%= t('acceptto_mfa_authenticator.disabled') %> - <%= link_to t('acceptto_mfa_authenticator.enable'), "#{Rails.application.config.mfa_site}#{Rails.application.config.mfa_enable_url}#{Rails.application.config.mfa_app_uid}" %>
+	  <% else %>
+	    <%= t('acceptto_mfa_authenticator.enabled') %> - <%= t('acceptto_mfa_authenticator.disable') %>
+	  <% end %>
+
       <h3><%= t('two_factor_authenticators.title') %></h3>
       <% if @two_factor_authenticators.blank? %>
         <%= t('two_factor_authenticators.disabled') %> - <%= link_to t('two_factor_authenticators.enable'), new_two_factor_authenticator_path %>
