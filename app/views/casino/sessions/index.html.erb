@@ -19,7 +19,7 @@
         <%= t('acceptto_mfa_authenticator.title')%>
 	  </h3>
 	  <% if @acceptto_mfa_authenticator.blank? %>
-        <%= t('acceptto_mfa_authenticator.disabled') %> - <%= link_to t('acceptto_mfa_authenticator.enable'), "#{Rails.application.config.mfa_site}#{Rails.application.config.mfa_enable_url}#{Rails.application.config.mfa_app_uid}/#{@ticket_granting_tickets[0].user.username}" %>
+        <%= t('acceptto_mfa_authenticator.disabled') %> - <%= link_to t('acceptto_mfa_authenticator.enable'), "#{Rails.application.config.mfa_site}#{Rails.application.config.mfa_enable_url}?uid=#{Rails.application.config.mfa_app_uid}&email=#{@ticket_granting_tickets[0].user.username}" %>
 	  <% else %>
 	    <%= t('acceptto_mfa_authenticator.enabled') %> - <%= t('acceptto_mfa_authenticator.disable') %>
 	  <% end %>
