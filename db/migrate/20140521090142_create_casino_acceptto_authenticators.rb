@@ -1,4 +1,4 @@
-class CreateCASinoAccepttoAuthenticators < ActiveRecord::Migration
+class CreateCasinoAccepttoAuthenticators < ActiveRecord::Migration
   def change
     create_table :casino_acceptto_authenticators do |t|
       t.integer :user_id

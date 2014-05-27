@@ -38,7 +38,7 @@
 	              seconds = parseInt(seconds_left % 60);
 
 	              if (seconds == 0) {
-	                  window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service]");
+	                  window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
 	              }
 
 	              if (seconds <= 0) {
