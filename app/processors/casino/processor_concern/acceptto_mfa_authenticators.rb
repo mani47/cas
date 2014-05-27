@@ -2,19 +2,18 @@ require 'addressable/uri'
 
 module CASino
   module ProcessorConcern
-    module TwoFactorAuthenticators
+    module AccepttoMfaAuthenticators
       class ValidationResult < CASino::ValidationResult; end
 
-      def validate_one_time_password(otp, authenticator)
-        if authenticator.nil? || authenticator.expired?
-          ValidationResult.new 'INVALID_AUTHENTICATOR', 'Authenticator does not exist or expired', :warn
+      def check(token, channel)
+        acceptto = Acceptto::Client.new(Rails.configuration.mfa_app_uid, Rails.configuration.mfa_app_secret, '')
+        status = acceptto.mfa_check(token, channel)
+        if status == "approved"
+          ValidationResult.new
+        elsif status == "rejected"
+          ValidationResult.new 'REJECTED_MFA', 'MFA request rejected!', :warn
         else
-          totp = ROTP::TOTP.new(authenticator.secret)
-          if totp.verify_with_drift(otp, CASino.config.two_factor_authenticator[:drift])
-            ValidationResult.new
-          else
-            ValidationResult.new 'INVALID_OTP', 'One-time password not valid', :warn
-          end
+          ValidationResult.new 'TIMEOUT_MFA', 'MFA request timed out.', :warn
         end
       end
     end

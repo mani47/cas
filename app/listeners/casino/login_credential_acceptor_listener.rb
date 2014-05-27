@@ -14,6 +14,13 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
     assign(:ticket_granting_ticket, ticket_granting_ticket)
     @controller.render 'validate_otp'
   end
+  
+  def acceptto_authentication_pending(ticket_granting_ticket)
+    assign(:ticket_granting_ticket, ticket_granting_ticket.ticket)
+    acceptto = Acceptto::Client.new(Rails.configuration.mfa_app_uid, Rails.configuration.mfa_app_secret, '')
+    @channel = acceptto.authenticate(ticket_granting_ticket.acceptto_authentication_token, I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"), I18n.t("acceptto_mfa_authenticator.mfa_authetication_type"))
+    @controller.render 'validate_mfa', :locals => { :channel => @channel }
+  end
 
   def invalid_login_credentials(login_ticket)
     @controller.flash.now[:error] = I18n.t('login_credential_acceptor.invalid_login_credentials')

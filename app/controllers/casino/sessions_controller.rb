@@ -34,4 +34,8 @@ class CASino::SessionsController < CASino::ApplicationController
   def mfa_callback
     processor(:AccepttoMfaAuthenticationActivator).process(params, cookies, request.user_agent)
   end
+  
+  def mfa_check
+    processor(:AccepttoMfaAuthenticationAcceptor).process(params, request.user_agent)
+  end
 end

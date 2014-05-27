@@ -13,4 +13,8 @@ class CASino::User < ActiveRecord::Base
   def active_acceptto_authenticator
     self.acceptto_authenticators.first
   end
+  
+  def acceptto_token
+    self.acceptto_authenticators.first.nil? ? '' : self.acceptto_authenticators.first.token
+  end
 end

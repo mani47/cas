@@ -56,7 +56,6 @@ class RenameBaseModels < ActiveRecord::Migration
     end
 
     # Users
-    rename_table :users, :casino_users
     unless index_exists?(:casino_users, [:authenticator, :username])
       add_index :casino_users, [:authenticator, :username], :unique => true
     end

@@ -57,5 +57,9 @@ en:
       disable: "You can disable mfa from your device using Acceptto app."
       successfully_activated: "Multi-Factor Authentication Successfully Activated."
       invalid_mfa_authenticator: "Multi-Factor Authentication Request Denied."
+      mfa_you_have_60: "You have 60 seconds to respond to the request sent to your device."
+      wishing_to_authorize: "Acceptto CAS is wishing to authorize."
+      mfa_authetication_type: "Login"
+      invalid_mfa_request: "Multi-Factor Authentication Request Denied!"
   datetime:
     ago: "%{datetime} ago"

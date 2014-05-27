@@ -36,6 +36,7 @@ module CASino
           ticket: random_ticket_string('TGC'),
           awaiting_two_factor_authentication: !user.active_two_factor_authenticator.nil?,
           awaiting_acceptto_authentication: !user.active_acceptto_authenticator.nil?,
+          acceptto_authentication_token: user.acceptto_token,
           user_agent: user_agent,
           long_term: !!long_term
         })

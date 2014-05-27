@@ -45,6 +45,8 @@ class CASino::LoginCredentialAcceptorProcessor < CASino::Processor
     ticket_granting_ticket = acquire_ticket_granting_ticket(authentication_result, @user_agent, long_term)
     if ticket_granting_ticket.awaiting_two_factor_authentication?
       @listener.two_factor_authentication_pending(ticket_granting_ticket.ticket)
+    elsif ticket_granting_ticket.awaiting_acceptto_authentication?
+      @listener.acceptto_authentication_pending(ticket_granting_ticket)
     else
       begin
         url = unless @params[:service].blank?

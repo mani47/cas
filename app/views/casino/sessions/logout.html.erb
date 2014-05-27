@@ -10,6 +10,9 @@
           <%= t('logout.logged_out_with_url') %> <a href="<%= @url %>"><%= @url %></a>
         <% end %>
       </p>
+      <p>
+      	<%= button_to t('login.label_button'), login_path, :method => :get, :button_class => 'button' %>
+      </p>
     </div>
     <div class="logo">
       <%= image_tag "logo.png" %>

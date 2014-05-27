@@ -1,7 +1,8 @@
+# This migration comes from casino (originally 20130809135400)
 # In order to support pre-2.0 installations of CASino that included CASinoCore,
 # we must rebuild the un-namespaced CASinoCore schema so that we can upgrade
 class CreateCoreSchema < ActiveRecord::Migration
-  CoreTables = %w{login_tickets proxy_granting_tickets proxy_tickets service_rules service_tickets ticket_granting_tickets two_factor_authenticators users}
+  CoreTables = %w{login_tickets proxy_granting_tickets proxy_tickets service_rules service_tickets ticket_granting_tickets two_factor_authenticators casino_users}
 
   def up
     CoreTables.each do |table_name|
@@ -104,14 +105,14 @@ class CreateCoreSchema < ActiveRecord::Migration
     add_index :two_factor_authenticators, :user_id
   end
 
-  def create_users
-    create_table :users do |t|
+  def create_casino_users
+    create_table :casino_users do |t|
       t.string  :authenticator,   :null => false
       t.string  :username,        :null => false
       t.text    :extra_attributes
 
       t.timestamps
     end
-    add_index :users, [:authenticator, :username], :unique => true
+    add_index :casino_users, [:authenticator, :username], :unique => true
   end
 end

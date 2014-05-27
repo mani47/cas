@@ -40,4 +40,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'useragent', '~> 0.4'
   s.add_runtime_dependency 'faraday', '~> 0.8'
   s.add_runtime_dependency 'rotp', '~> 1.4'
+  s.add_runtime_dependency 'oauth2'
 end

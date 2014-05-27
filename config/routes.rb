@@ -8,6 +8,7 @@ CASino::Engine.routes.draw do
   get 'logout' => 'sessions#logout'
   post 'validate_otp' => 'sessions#validate_otp'
   get 'mfa/callback' => 'sessions#mfa_callback'
+  get 'mfa/check' => 'sessions#mfa_check'
 
   get 'destroy-other-sessions' => 'sessions#destroy_others'
 
