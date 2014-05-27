@@ -17,6 +17,7 @@ class CASino::AccepttoMfaAuthenticationAcceptorListener < CASino::Listener
 
   def invalid_mfa_request
     @controller.flash.now[:error] = I18n.t('acceptto_mfa_authenticator.invalid_mfa_request')
+    @controller.redirect_to login_path
   end
 
   def service_not_allowed(service)

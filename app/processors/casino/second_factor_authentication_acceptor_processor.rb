@@ -16,6 +16,7 @@ class CASino::SecondFactorAuthenticationAcceptorProcessor < CASino::Processor
   # @param [Hash] params parameters supplied by user. The processor will look for keys :otp and :service.
   # @param [String] user_agent user-agent delivered by the client
   def process(params = nil, user_agent = nil)
+    p "Processing SecondFactor with Param: #{params}"
     cookies ||= {}
     tgt = find_valid_ticket_granting_ticket(params[:tgt], user_agent, true)
     if tgt.nil?

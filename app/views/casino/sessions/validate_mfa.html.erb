@@ -6,7 +6,7 @@
 	      $(function() {
 	          var faye = new Faye.Client("<%= Acceptto::Client.faye_server_address %>");
 	          faye.subscribe("/messages/<%= channel %>", function(data) {
-	              window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>");
+	              window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
 	          });
 
 	          var now = new Date();
@@ -38,7 +38,7 @@
 	              seconds = parseInt(seconds_left % 60);
 
 	              if (seconds == 0) {
-	                  window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>");
+	                  window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service]");
 	              }
 
 	              if (seconds <= 0) {
