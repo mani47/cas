@@ -86,7 +86,6 @@ input[type=password] {
   font-size: 120%;
   height: 36px;
   padding: 6px;
-  width: 100%;
 
   &:focus {
     background: #F5F5F4;
@@ -181,7 +180,6 @@ table {
   margin-top: 10%;
   overflow: auto;
   padding: 20px;
-  width: 560px;
 }
 
 .logo {
@@ -250,7 +248,6 @@ table {
   .form {
     border-left: 1px solid #eee;
     float: left;
-    padding: 15px;
     width: 55%;
   }
 }
@@ -318,15 +315,101 @@ table {
   }
 }
 
-
 /// RESPONSIVE ///
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 320px)  {
   .container {
     padding-top: 0;
   }
 
   .box {
     width: 100%;
+  }
+
+  .sessions, .logout {
+    .info {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .logo {
+      background-position: 0 0;
+      float: none;
+      height: 200px;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .login, .logout {
+    > div {
+      height: auto;
+    }
+  }
+
+  .login {
+    .logo {
+      width: 100%;
+    }
+
+    .form {
+      border-left: none;
+      padding-bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+
+/// RESPONSIVE ///
+@media only screen and (max-width: 480px)  {
+  .container {
+    padding-top: 0;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .sessions, .logout {
+    .info {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .logo {
+      background-position: 0 0;
+      float: none;
+      height: 200px;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .login, .logout {
+    > div {
+      height: auto;
+    }
+  }
+
+  .login {
+    .logo {
+      width: 100%;
+    }
+
+    .form {
+      border-left: none;
+      padding-bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+
+
+/// RESPONSIVE ///
+@media only screen and (max-width: 600px)  {
+  .container {
+    padding-top: 0;
   }
 
   .sessions, .logout {
@@ -419,4 +502,8 @@ table {
       width: 45%;
     }
   }
+}
+
+@media (min-width: 1200px) {
+  .box { width: 560px; }
 }

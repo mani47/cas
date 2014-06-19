@@ -10,7 +10,7 @@
     <div class="logo">
        <%= image_tag "logo.png" %>
     </div>
-
+	<!-- Login -->
     <div class="form">
       <%= form_tag(login_path, method: :post, id: 'login-form') do %>
         <%= hidden_field_tag :lt, @login_ticket.ticket %>

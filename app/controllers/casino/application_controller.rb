@@ -4,7 +4,7 @@ require 'http_accept_language'
 class CASino::ApplicationController < ::ApplicationController
   include ApplicationHelper
 
-  layout 'application'
+  layout 'casino'
   before_filter :set_locale
 
   unless Rails.env.development?
