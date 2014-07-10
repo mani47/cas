@@ -1,75 +1,90 @@
-<style type="text/css">
- .panel-warning { display: none; visibility: hidden;}
-</style>
-
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><%= image_tag "logo.png" %> CAS</a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Dashboard</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= @ticket_granting_tickets[0].user.username %></a>
+      </li>
+      <li><%= link_to t('sessions.label_logout_button'), logout_path, :ID => 'logout' %></li>
+    </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</nav>
 <div class="container">
-  <div class="sessions box">
+  <div class="row">
     <%= render 'messages' %>
-    <div class="info">
-      <h1><%= t('sessions.title') %></h1>
-      <p>
-        <%= raw t('sessions.currently_logged_in_as', :username => @ticket_granting_tickets[0].user.username) %>
-      </p>
+    <fieldset>
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><%= t('acceptto_mfa_authenticator.title') %></div>
+          <div class="panel-body">
+            <% if @acceptto_mfa_authenticator.blank? %>
+                <%= t('acceptto_mfa_authenticator.disabled') %>
+                - <%= link_to t('acceptto_mfa_authenticator.enable'), "#{Rails.application.config.mfa_site}#{Rails.application.config.mfa_enable_url}?uid=#{Rails.application.config.mfa_app_uid}&email=#{@ticket_granting_tickets[0].user.username}" %>
+            <% else %>
+                <%= t('acceptto_mfa_authenticator.enabled') %> - <%= t('acceptto_mfa_authenticator.disable') %>
+            <% end %>
 
-      <%= link_to t('sessions.label_logout_button'), logout_path, :class => 'button' %>
-    </div>
-
-    <div class="logo">
-      <%= image_tag "logo.png" %>
-    </div>
-
-      
-	  <h3>
-        <%= t('acceptto_mfa_authenticator.title')%>
-	  </h3>
-	  <% if @acceptto_mfa_authenticator.blank? %>
-        <%= t('acceptto_mfa_authenticator.disabled') %> - <%= link_to t('acceptto_mfa_authenticator.enable'), "#{Rails.application.config.mfa_site}#{Rails.application.config.mfa_enable_url}?uid=#{Rails.application.config.mfa_app_uid}&email=#{@ticket_granting_tickets[0].user.username}" %>
-	  <% else %>
-	    <%= t('acceptto_mfa_authenticator.enabled') %> - <%= t('acceptto_mfa_authenticator.disable') %>
-	  <% end %>
-
-      <!-- <h3><%= t('two_factor_authenticators.title') %></h3>
+            <!-- <h3><%= t('two_factor_authenticators.title') %></h3>
       <% if @two_factor_authenticators.blank? %>
         <%= t('two_factor_authenticators.disabled') %> - <%= link_to t('two_factor_authenticators.enable'), new_two_factor_authenticator_path %>
       <% else %>
         <%= t('two_factor_authenticators.enabled') %> - <%= button_to t('two_factor_authenticators.disable'), two_factor_authenticator_path(@two_factor_authenticators[0].id), method: :delete %>
       <% end %> -->
-      
-      <h3><%= t('sessions.your_active_sessions') %></h3>
-      <table width="100%" class="tickets">
-        <thead>
-          <tr>
-            <th><%= t('sessions.table.column_browser') %></th>
-            <th><%= t('sessions.table.column_services') %></th>
-            <th><%= t('sessions.table.column_activity') %></th>
-            <th width="180">&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @ticket_granting_tickets.each do |ticket_granting_ticket| %>
-            <tr class="<%= 'highlighted' if current_ticket_granting_ticket?(ticket_granting_ticket) %>">
-              <td data-label="<%= t('sessions.table.column_browser') %>">
+          </div>
+        </div>
+        <div class="panel panel-success">
+          <div class="panel-heading"><%= t('sessions.your_active_sessions') %></div>
+          <div class="panel-body">
+            <table width="100%" class="tickets table-striped table-hover table-responsive table">
+              <thead>
+              <tr>
+                <th><%= t('sessions.table.column_browser') %></th>
+                <th><%= t('sessions.table.column_services') %></th>
+                <th><%= t('sessions.table.column_activity') %></th>
+                <th width="180">&nbsp;</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @ticket_granting_tickets.each do |ticket_granting_ticket| %>
+                  <tr class="<%= 'highlighted' if current_ticket_granting_ticket?(ticket_granting_ticket) %>">
+                    <td data-label="<%= t('sessions.table.column_browser') %>">
                 <span title="<%= ticket_granting_ticket.user_agent %>">
                   <%= ticket_granting_ticket.browser_info %>
                 </span>
-              </td>
-              <td data-label="<%= t('sessions.table.column_services') %>">
-                <%= ticket_granting_ticket.service_tickets.size %>
-              </td>
-              <td data-label="<%= t('sessions.table.column_activity') %>">
-                <%= t 'datetime.ago', datetime: distance_of_time_in_words_to_now(ticket_granting_ticket.updated_at) %>
-              </td>
-              <td>
-                <% if current_ticket_granting_ticket?(ticket_granting_ticket) %>
-                  <strong><%= t('sessions.current_session') %></strong>
-                <% else %>
-                  <%= button_to t('sessions.end_session'), session_path(ticket_granting_ticket.id), method: :delete %>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+                    </td>
+                    <td data-label="<%= t('sessions.table.column_services') %>">
+                      <%= ticket_granting_ticket.service_tickets.size %>
+                    </td>
+                    <td data-label="<%= t('sessions.table.column_activity') %>">
+                      <%= t 'datetime.ago', datetime: distance_of_time_in_words_to_now(ticket_granting_ticket.updated_at) %>
+                    </td>
+                    <td>
+                      <% if current_ticket_granting_ticket?(ticket_granting_ticket) %>
+                          <strong><%= t('sessions.current_session') %></strong>
+                      <% else %>
+                          <%= button_to t('sessions.end_session'), session_path(ticket_granting_ticket.id), method: :delete %>
+                      <% end %>
+                    </td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </fieldset>
   </div>
-  <%= render 'footer' %>
 </div>

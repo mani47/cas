@@ -1,22 +1,26 @@
-<div class="container">
-  <div class="logout box">
-
-    <div class="info">
-      <h1><%= t('logout.title') %></h1>
-      <p>
-        <% if @url.nil? %>
-          <%= t('logout.logged_out_without_url') %>
-        <% else %>
-          <%= t('logout.logged_out_with_url') %> <a href="<%= @url %>"><%= @url %></a>
-        <% end %>
-      </p>
-      <p>
-      	<%= button_to t('login.label_button'), login_path, :method => :get, :button_class => 'button' %>
-      </p>
-    </div>
-    <div class="logo">
-      <%= image_tag "logo.png" %>
+<div class="row" style="margin-top:100px;">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading"><%= t('logout.title') %></div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="alert alert-success">
+          <% if @url.nil? %>
+              <%= t('logout.logged_out_without_url') %>
+          <% else %>
+              <%= t('logout.logged_out_with_url') %> <a href="<%= @url %>"><%= @url %></a>
+          <% end %>
+              </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px">
+          <div class="col-md-6 col-md-offset-3" style="text-align: center">
+            <%= button_to t('login.label_button'), login_path, :method => :get, :class => 'btn btn-info',:style => 'width:120px;'  %>
+          </div>
+        </div>
+        </p>
+      </div>
     </div>
   </div>
-  <%= render 'footer' %>
 </div>
