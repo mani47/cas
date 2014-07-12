@@ -1,8 +1,9 @@
 <%= javascript_include_tag "#{Acceptto::Client.faye_server_address}/faye.js", "data-turbolinks-track" => false %>
-<div class="row">
+<div class="row" style="margin-top:100px;">
   <div class="second_factor col-md-8 col-md-offset-2">
     <div class="panel panel-default">
-      <div class="panel-body">
+	  <div class="panel-heading">Validate MFA</div>
+      <div class="panel-body" style="height:200px;padding:30px;">
         <div class="flash notice alert alert-warning" id="flash_notice"></div>
         <script type="text/javascript">
             $(function () {
@@ -48,8 +49,7 @@
                     }
 
                     // format countdown string + set tag value
-                    countdown.innerHTML = notice_text + " : " + days + "d, " + hours + "h, "
-                            + minutes + "m, " + seconds + "s";
+                    countdown.innerHTML = notice_text + " : " + seconds + "s";
 
                 }, 1000);
 
