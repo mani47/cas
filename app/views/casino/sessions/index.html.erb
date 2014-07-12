@@ -15,12 +15,10 @@
       <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Dashboard</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= @ticket_granting_tickets[0].user.username %></a>
-      </li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= @ticket_granting_tickets[0].user.username %></a></li>
       <li><%= link_to t('sessions.label_logout_button'), logout_path, :ID => 'logout' %></li>
     </ul>
   </div>
-  <!-- /.navbar-collapse -->
 </nav>
 <div class="container">
   <div class="row">
