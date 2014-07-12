@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CASino [![Build Status](https://secure.travis-ci.org/rbCAS/CASino.png?branch=master)](https://travis-ci.org/rbCAS/CASino) [![Coverage Status](https://coveralls.io/repos/rbCAS/CASino/badge.png?branch=master)](https://coveralls.io/r/rbCAS/CASino?branch=master)
 
 CASino Rails Engine (used in CASinoApp).
@@ -11,3 +12,9 @@ Please check our [documentation](http://casino.rbcas.com/) for setup and configu
 ## License
 
 CASino is released under the [MIT License](http://www.opensource.org/licenses/MIT). See LICENSE.txt for further details.
+=======
+cas
+===
+
+Central Authentication Server based on CASino
+>>>>>>> 6fed8ef7608fb962bb12537f65cf54adf6f39cc1
