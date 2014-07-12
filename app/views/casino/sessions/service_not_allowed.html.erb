@@ -1,14 +1,10 @@
-<div class="container">
-  <div class="logout box">
-
-    <div class="info">
-      <h1><%= t 'service_not_allowed.title' %></h1>
-      <p>
-        <%= t 'service_not_allowed.message', :service => @service %>
-      </p>
+<div class="row" style="margin-top:100px;">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading"><%= t 'service_not_allowed.title' %></div>
+        <div class="panel-body">
+          <%= t 'service_not_allowed.message', :service => @service %>
+        </div>
+      </div>
     </div>
-    <div class="logo">
-      <%= image_tag "logo.png" %>
-    </div>
-  </div>
 </div>

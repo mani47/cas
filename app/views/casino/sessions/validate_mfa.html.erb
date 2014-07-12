@@ -1,57 +1,61 @@
 <%= javascript_include_tag "#{Acceptto::Client.faye_server_address}/faye.js", "data-turbolinks-track" => false %>
-<div class="container">
-  <div class="second_factor box">
-	  <div class="flash notice" id="flash_notice"></div>
-	  <script type="text/javascript">
-	      $(function() {
-	          var faye = new Faye.Client("<%= Acceptto::Client.faye_server_address %>");
-	          faye.subscribe("/messages/<%= channel %>", function(data) {
-	              window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
-	          });
+<div class="row">
+  <div class="second_factor col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="flash notice alert alert-warning" id="flash_notice"></div>
+        <script type="text/javascript">
+            $(function () {
+                var faye = new Faye.Client("<%= Acceptto::Client.faye_server_address %>");
+                faye.subscribe("/messages/<%= channel %>", function (data) {
+                    window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
+                });
 
-	          var now = new Date();
+                var now = new Date();
 
-	          var target_date = new Date(now.getTime() + 60000);
+                var target_date = new Date(now.getTime() + 60000);
 
-	          // variables for time units
-	          var days, hours, minutes, seconds;
+                // variables for time units
+                var days, hours, minutes, seconds;
 
-	          // get tag element
-	          var countdown = document.getElementById("flash_notice");
-	          var notice_text = '<%= t("acceptto_mfa_authenticator.mfa_you_have_60") %>'
+                // get tag element
+                var countdown = document.getElementById("flash_notice");
+                var notice_text = '<%= t("acceptto_mfa_authenticator.mfa_you_have_60") %>'
 
-	          // update the tag with id "countdown" every 1 second
-	          setInterval(function () {
+                // update the tag with id "countdown" every 1 second
+                setInterval(function () {
 
-	              // find the amount of "seconds" between now and target
-	              var current_date = new Date().getTime();
-	              var seconds_left = (target_date - current_date) / 1000;
+                    // find the amount of "seconds" between now and target
+                    var current_date = new Date().getTime();
+                    var seconds_left = (target_date - current_date) / 1000;
 
-	              // do some time calculations
-	              days = parseInt(seconds_left / 86400);
-	              seconds_left = seconds_left % 86400;
+                    // do some time calculations
+                    days = parseInt(seconds_left / 86400);
+                    seconds_left = seconds_left % 86400;
 
-	              hours = parseInt(seconds_left / 3600);
-	              seconds_left = seconds_left % 3600;
+                    hours = parseInt(seconds_left / 3600);
+                    seconds_left = seconds_left % 3600;
 
-	              minutes = parseInt(seconds_left / 60);
-	              seconds = parseInt(seconds_left % 60);
+                    minutes = parseInt(seconds_left / 60);
+                    seconds = parseInt(seconds_left % 60);
 
-	              if (seconds == 0) {
-	                  window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
-	              }
+                    if (seconds == 0) {
+                        window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
+                    }
 
-	              if (seconds <= 0) {
-	                  seconds = 0;
-	              }
+                    if (seconds <= 0) {
+                        seconds = 0;
+                    }
 
-	              // format countdown string + set tag value
-	              countdown.innerHTML = notice_text + " : " + days + "d, " + hours + "h, "
-	                      + minutes + "m, " + seconds + "s";
+                    // format countdown string + set tag value
+                    countdown.innerHTML = notice_text + " : " + days + "d, " + hours + "h, "
+                            + minutes + "m, " + seconds + "s";
 
-	          }, 1000);
+                }, 1000);
 
-	      });
-	  </script>
+            });
+        </script>
+      </div>
+    </div>
   </div>
 </div>

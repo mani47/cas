@@ -30,3 +30,9 @@
   });
 
 })(this, document);
+
+
+$(function(){
+    $('#flash_error').addClass('alert alert-danger');
+    $('#logout').html('<span class="glyphicon glyphicon-off"></span>Logout')
+});

@@ -1,0 +1,87 @@
+body {
+  background: url(image_path('main-background.png')) top;
+}
+
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+fieldset {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px #666;
+  border: none;
+  background: #fff;
+}
+
+.btn-success {
+  background: #A8CF45;
+  border: solid 1px #769324;
+}
+
+.btn-success:hover {
+  background: #90B231;
+}
+
+.logo-header {
+  background: none repeat scroll 0% 0% #515151;
+  text-align: center;
+  margin-top: -2px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.panel-warning {
+  display: none;
+  visibility: hidden;
+}
+
+.label, .glyphicon {
+  margin-right: 5px;
+}
+
+.navbar {
+  margin-top: 40px;
+}
+
+.navbar-default {
+  background: #555;
+  border: #000;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: $green;
+}
+
+.navbar-brand img{margin-top:-10px;}
+.navbar-default .navbar-brand{color:#ccc;font-size:20px;}
+.navbar-default .navbar-brand:hover{color:$green;}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 990px) {
+  .navbar {
+    margin-top: 0px;
+  }
+
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  .navbar {
+    margin-top:0px;
+  }
+}

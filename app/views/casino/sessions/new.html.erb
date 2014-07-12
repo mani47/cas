@@ -1,31 +1,43 @@
 <% login_notice = t('login.notice', default: '') %>
-<div class="container">
-  <% unless login_notice.blank? %>
-  <div class="notice box">
-    <i class="icon-info"></i> <%= login_notice %>
-  </div>
-  <% end %>
-  <div class="login box">
-    <%= render 'messages' %>
-    <div class="logo">
-       <%= image_tag "logo.png" %>
-    </div>
-	<!-- Login -->
-    <div class="form">
-      <%= form_tag(login_path, method: :post, id: 'login-form') do %>
-        <%= hidden_field_tag :lt, @login_ticket.ticket %>
-        <%= hidden_field_tag :service, params[:service] unless params[:service].nil? %>
-        <%= label_tag :username, t('login.label_username') %>
-        <%= text_field_tag :username, params[:username], autofocus:true %>
-        <%= label_tag :password, t('login.label_password') %>
-        <%= password_field_tag :password %>
-        <%= label_tag :rememberMe do %>
-          <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
-        <% end %>
-        <%= button_tag t('login.label_button'), :class => 'button' %>
-      <% end %>
-    </div>
-  </div>
-  <%= render 'footer' %>
-</div>
+<div class="container-fluid">
+  <div class="row" style="margin-top:130px">
+    <div class="col-xs-10  col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ">
+      <div class="form">
+        <%= form_tag(login_path, method: :post, id: 'login-form') do %>
+            <%= hidden_field_tag :lt, @login_ticket.ticket %>
+            <%= hidden_field_tag :service, params[:service] unless params[:service].nil? %>
+            <fieldset>
+              <h2 class="logo-header"> <%= image_tag "logo.png" %></h2>
+              <hr class="colorgraph">
 
+              <div class="form-group">
+                <%= text_field_tag :username, params[:username], autofocus: true, :class => 'form-control input-lg', :placeholder => 'Email Address' %>
+              </div>
+              <div class="form-group">
+                <%= password_field_tag :password, params[:password], class: 'form-control input-lg', placeholder: 'Password' %>
+              </div>
+				<span class="button-checkbox">
+				  <%= label_tag :rememberMe do %>
+                     <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
+                  <% end %>
+                </span>
+              <hr class="colorgraph">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                  <%= button_tag t('login.label_button'), :class => 'btn btn-lg btn-success btn-block' %>
+                </div>
+              </div>
+            </fieldset>
+            </div>
+            </div>
+            </div>
+            <div class="row" style="margin-top:20px;">
+              <div class="col-md-8 col-md-offset-2">
+                <% unless login_notice.blank? %>
+                      <%= login_notice %>
+                <% end %>
+                <%= render 'messages' %>
+              </div>
+        <% end %>
+        </div>
+        </div>
