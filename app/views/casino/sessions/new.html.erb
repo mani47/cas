@@ -1,7 +1,7 @@
 <% login_notice = t('login.notice', default: '') %>
-<div class="container-fluid">
-  <div class="row" style="margin-top:130px">
-    <div class="col-xs-10  col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ">
+<div class="container">
+  <div class="row" style="margin-top:10%;">
+    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
       <div class="form">
         <%= form_tag(login_path, method: :post, id: 'login-form') do %>
             <%= hidden_field_tag :lt, @login_ticket.ticket %>
