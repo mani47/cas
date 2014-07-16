@@ -46,7 +46,8 @@
         <div class="panel panel-success">
           <div class="panel-heading"><%= t('sessions.your_active_sessions') %></div>
           <div class="panel-body">
-            <table width="100%" class="tickets table-striped table-hover table-responsive table">
+           <div class="table-responsive">
+            <table width="100%" class="tickets table-striped table-hover table">
               <thead>
               <tr>
                 <th><%= t('sessions.table.column_browser') %></th>
@@ -80,6 +81,7 @@
               <% end %>
               </tbody>
             </table>
+           </div>
           </div>
         </div>
       </div>
