@@ -42,6 +42,7 @@
 
                     if (seconds == 0) {
                         window.location.replace("<%= mfa_check_path %>?channel=<%= channel %>&tgt=<%= @ticket_granting_ticket || params[:tgt] %>&service=<%= params[:service] %>");
+                        countdown.innerHTML = notice_text
                     }
 
                     if (seconds <= 0) {
@@ -49,7 +50,9 @@
                     }
 
                     // format countdown string + set tag value
-                    countdown.innerHTML = notice_text + " : " + seconds + "s";
+                    if (seconds > 0) {
+                        countdown.innerHTML = notice_text + " : " + seconds + "s";
+                    }
 
                 }, 1000);
 

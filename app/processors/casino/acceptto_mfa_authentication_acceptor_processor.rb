@@ -37,7 +37,7 @@ class CASino::AccepttoMfaAuthenticationAcceptorProcessor < CASino::Processor
           @listener.service_not_allowed(clean_service_url params[:service])
         end
       else
-        @listener.invalid_mfa_request
+        @listener.invalid_mfa_request(params[:service])
       end
     end
   end
