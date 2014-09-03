@@ -22,7 +22,7 @@ en:
     logged_out_without_url: "You have successfully logged out."
     logged_out_with_url: "The application you just logged out of has provided a link it would like you to follow:"
   sessions:
-    title: "Welcome to Acceptto CAS"
+    title: "Welcome to Acceptto SSO"
     currently_logged_in_as: "You are currently logged in as <strong>%{username}</strong>."
     label_logout_button: "Logout"
     your_active_sessions: "Your Active Sessions"
@@ -58,7 +58,7 @@ en:
       successfully_activated: "Multi-Factor Authentication Successfully Activated."
       invalid_mfa_authenticator: "MFA Request Denied."
       mfa_you_have_60: "You have 60 seconds to respond to the request sent to your device"
-      wishing_to_authorize: "Acceptto CAS is wishing to authorize."
+      wishing_to_authorize: "Acceptto SSO is wishing to authorize."
       mfa_authetication_type: "Login"
       invalid_mfa_request: "Multi-Factor Authentication Request Denied!"
   datetime:
