@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
     <mapping directory="$PROJECT_DIR$/../acceptto-website" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../m2m-web" vcs="Git" />
   </component>
 </project>
 

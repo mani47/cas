@@ -19,9 +19,10 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
     assign(:ticket_granting_ticket, ticket_granting_ticket.ticket)
     acceptto = Acceptto::Client.new(Rails.configuration.mfa_app_uid, Rails.configuration.mfa_app_secret, '')
     @channel = acceptto.authenticate(ticket_granting_ticket.acceptto_authentication_token, I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"), I18n.t("acceptto_mfa_authenticator.mfa_authetication_type"))
-    callback_url = "http://#{request.host_with_port}/cass/mfa/check"
+    @controller.session[:channel] = @channel
+    callback_url = "http://#{@controller.request.host_with_port}/cass/mfa/check?tgt=#{ticket_granting_ticket.ticket}"
     redirect_url = "#{Rails.configuration.mfa_site}/mfa/index?channel=#{@channel}&callback_url=#{callback_url}"
-    return redirect_to redirect_url
+    return @controller.redirect_to redirect_url
     #@controller.render 'validate_mfa', :locals => { :channel => @channel }
   end
 

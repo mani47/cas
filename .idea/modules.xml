@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../acceptto-website/.idea/acceptto-website.iml" filepath="$PROJECT_DIR$/../acceptto-website/.idea/acceptto-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cas.iml" filepath="$PROJECT_DIR$/.idea/cas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../m2m-web/.idea/m2m-web.iml" filepath="$PROJECT_DIR$/../m2m-web/.idea/m2m-web.iml" />
     </modules>
   </component>
 </project>

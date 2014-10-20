@@ -36,6 +36,6 @@ class CASino::SessionsController < CASino::ApplicationController
   end
   
   def mfa_check
-    processor(:AccepttoMfaAuthenticationAcceptor).process(params, request.user_agent)
+    processor(:AccepttoMfaAuthenticationAcceptor).process(params, request.user_agent, session)
   end
 end
