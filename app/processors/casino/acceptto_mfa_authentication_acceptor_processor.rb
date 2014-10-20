@@ -14,13 +14,24 @@ class CASino::AccepttoMfaAuthenticationAcceptorProcessor < CASino::Processor
   # @param [Hash] params parameters supplied by user. The processor will look for keys :channel and :service.
   # @param [String] user_agent user-agent delivered by the client
   def process(params = nil, user_agent = nil)
-    p "Processing AccepttoMFA with Param: #{params}"
+    p "Processing AccepttoMFA with Param salam: #{params}"
     cookies ||= {}
+    p "params[:tgt] is #{params[:tgt]}"
     tgt = find_valid_ticket_granting_ticket(params[:tgt], user_agent, true)
+    p "TGT is #{tgt}"
     if tgt.nil?
       @listener.user_not_logged_in
     else
-      validation_result = check(tgt.acceptto_authentication_token, params[:channel])
+	    if @controller.session[:channel].blank?
+		    return @listener.invalid_mfa_request(params[:service])
+	    end
+
+	    channel = @controller.session[:channel]
+	    p "******************************************"
+	    p "Channel in proccessor is: #{channel}"
+	    p "******************************************"
+	    @controller.session[:channel] = ''
+      validation_result = check(tgt.acceptto_authentication_token, channel)
       if validation_result.success?
         tgt.awaiting_acceptto_authentication = false
         tgt.save!
