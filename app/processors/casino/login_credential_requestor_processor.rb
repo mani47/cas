@@ -16,6 +16,8 @@ class CASino::LoginCredentialRequestorProcessor < CASino::Processor
   # @param [Hash] cookies cookies supplied by user
   # @param [String] user_agent user-agent delivered by the client
   def process(params = nil, cookies = nil, user_agent = nil)
+    p "****************************************************************************"
+    p "process login_credential_requestor_ with params: #{params}"
     @params = params || {}
     @cookies = cookies || {}
     @user_agent = user_agent || {}
@@ -41,7 +43,9 @@ class CASino::LoginCredentialRequestorProcessor < CASino::Processor
   def handle_logged_in
     service_url_with_ticket = unless @service_url.nil?
       acquire_service_ticket(@ticket_granting_ticket, @service_url, true).service_with_ticket_url
-    end
+                              end
+    p "****************************************************************************"
+    p "handling logged in with service_url_with_ticket: #{service_url_with_ticket}"
     @listener.user_logged_in(service_url_with_ticket)
   end
 
@@ -50,6 +54,8 @@ class CASino::LoginCredentialRequestorProcessor < CASino::Processor
       # we actually lie to the listener to simplify things
       @listener.user_logged_in(@service_url)
     else
+      p "****************************************************************************"
+      p "handling not logged in acquiring login ticket ... #{@service_url}"
       login_ticket = acquire_login_ticket
       @listener.user_not_logged_in(login_ticket)
     end

@@ -21,6 +21,7 @@ class CASino::LoginCredentialAcceptorProcessor < CASino::Processor
   # @param [Hash] params parameters supplied by user
   # @param [String] user_agent user-agent delivered by the client
   def process(params = nil, user_agent = nil)
+    p "LoginCredentialAcceptorProcessor processing login request"
     @params = params || {}
     @user_agent = user_agent
     if login_ticket_valid?(@params[:lt])
@@ -46,7 +47,7 @@ class CASino::LoginCredentialAcceptorProcessor < CASino::Processor
     if ticket_granting_ticket.awaiting_two_factor_authentication?
       @listener.two_factor_authentication_pending(ticket_granting_ticket.ticket)
     elsif ticket_granting_ticket.awaiting_acceptto_authentication?
-      @listener.acceptto_authentication_pending(ticket_granting_ticket)
+      @listener.acceptto_authentication_pending(ticket_granting_ticket, @params[:service])
     else
       begin
         url = unless @params[:service].blank?

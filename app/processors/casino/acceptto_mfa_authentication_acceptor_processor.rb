@@ -14,12 +14,11 @@ class CASino::AccepttoMfaAuthenticationAcceptorProcessor < CASino::Processor
   # @param [Hash] params parameters supplied by user. The processor will look for keys :channel and :service.
   # @param [String] user_agent user-agent delivered by the client
   def process(params = nil, user_agent = nil, session = nil)
-    p "Processing AccepttoMFA with Param: #{params}"
+    p "CASINO Processing Acceptto MFA with Param: #{params}"
     cookies ||= {}
     p "params[:tgt] is #{params[:tgt]}"
     tgt = find_valid_ticket_granting_ticket(params[:tgt], user_agent, true)
     p "TGT is #{tgt}"
-    p "listener: #{@listener.inspect}"
     if tgt.nil?
       @listener.user_not_logged_in
     else

@@ -14,9 +14,15 @@ class CASino::LogoutProcessor < CASino::Processor
     params ||= {}
     cookies ||= {}
     remove_ticket_granting_ticket(cookies[:tgt], user_agent)
+    p "*******************************************"
+    p "proccessing logout with params: #{params}"
+    p "*******************************************"
     if params[:service] && CASino::ServiceRule.allowed?(params[:service])
+      p "**********************************************"
+      p "user logout with redirect immediately of service: #{params[:service]}"
       @listener.user_logged_out(params[:service], true)
     else
+      p "user logout with url: #{params[:url]}"
       @listener.user_logged_out(params[:url])
     end
   end
