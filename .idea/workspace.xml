@@ -2,12 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11039a80-7bcb-4eb5-8efe-46a1da8d7f83" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/Gemfile.lock" afterPath="$PROJECT_DIR$/../acceptto-website/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/config/routes.rb" afterPath="$PROJECT_DIR$/../acceptto-website/config/routes.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/old/devices_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/old/passwords_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/old/policies_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/old/registrations_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/old/tfas_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/old/welcome_controller.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/.yardoc/object_types" afterPath="$PROJECT_DIR$/../m2m-web/.yardoc/object_types" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/.yardoc/objects/root.dat" afterPath="$PROJECT_DIR$/../m2m-web/.yardoc/objects/root.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/AdminUser.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/AdminUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V1/ApiController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V1/ApiController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V2/AuthController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V2/AuthController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V3/AuthController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V3/AuthController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V4/AuthController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V4/AuthController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V5/AuthController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V5/AuthController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/AuthController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/AuthController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/ChangePassword.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/ChangePassword.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/ChangePasswordController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/ChangePasswordController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V2/DeviceController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V2/DeviceController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V3/DeviceController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V3/DeviceController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V4/DeviceController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V4/DeviceController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V5/DeviceController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V5/DeviceController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/DeviceController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/DeviceController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V1/DevicesController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V1/DevicesController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/ForgotPassword.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/ForgotPassword.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/ForgotPasswordController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/ForgotPasswordController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/Gemfile" afterPath="$PROJECT_DIR$/../acceptto-website/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/Gemfile" afterPath="$PROJECT_DIR$/../m2m-web/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Organisation.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Organisation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/OrganisationUser.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/OrganisationUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Permission.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Permission.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Policy.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Policy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/PushManager.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/PushManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/RecoverOnPhone.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/RecoverOnPhone.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Recovery.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Recovery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V2/RelyingPartyController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V2/RelyingPartyController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V3/RelyingPartyController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V3/RelyingPartyController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V4/RelyingPartyController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V4/RelyingPartyController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V5/RelyingPartyController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V5/RelyingPartyController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/RelyingPartyController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/RelyingPartyController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Role.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Role.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/SecurityQuestion.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/SecurityQuestion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/TextManager.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/TextManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Tfa.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Tfa.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V1/TfaController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V1/TfaController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Ticket.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Ticket.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/UnregisterDevice.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/UnregisterDevice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/UnregisterDeviceController.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7/UnregisterDeviceController.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/User.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/User.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/UserSecurityQuestionAnswer.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/UserSecurityQuestionAnswer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V1.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V3.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V4.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V5.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/Api/V7.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/Api/V7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/_index.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/.yardoc/checksums" afterPath="$PROJECT_DIR$/../m2m-web/.yardoc/checksums" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/class_list.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/class_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/file.README.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/file.README.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/file_list.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/file_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/frames.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/frames.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/js/full_list.js" afterPath="$PROJECT_DIR$/../m2m-web/doc/js/full_list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/index.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/method_list.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/method_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/../acceptto-website/app/controllers/sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/doc/top-level-namespace.html" afterPath="$PROJECT_DIR$/../m2m-web/doc/top-level-namespace.html" />
     </list>
     <ignored path="CASino.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,91 +92,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/casino/sessions_controller.rb">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1316">
-              <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mfa_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../m2m-web/app/controllers/mfa_controller.rb">
+      <file leaf-file-name="casino.gemspec" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/casino.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="4340">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../m2m-web/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2746" max-vertical-offset="3528">
-              <caret line="118" column="59" selection-start-line="118" selection-start-column="59" selection-end-line="118" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1988">
-              <caret line="57" column="28" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="relying_party_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../m2m-web/app/controllers/api/v8/relying_party_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2016">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acceptto_mfa_authentication_acceptor_processor.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/processors/casino/acceptto_mfa_authentication_acceptor_processor.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="1736">
-              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_credential_acceptor_listener.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/listeners/casino/login_credential_acceptor_listener.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1540">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../m2m-web/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78867924" vertical-offset="2677" max-vertical-offset="3472">
-              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acceptto_mfa_authentication_acceptor_listener.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/listeners/casino/acceptto_mfa_authentication_acceptor_listener.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1064">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.59133965" vertical-offset="209" max-vertical-offset="950">
+              <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -128,20 +123,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../m2m-web" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/listeners/casino/login_credential_acceptor_listener.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/casino/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/processors/casino/acceptto_mfa_authentication_acceptor_processor.rb" />
-        <option value="$PROJECT_DIR$/../m2m-web/app/controllers/mfa_controller.rb" />
-        <option value="$PROJECT_DIR$/../m2m-web/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/casino.gemspec" />
       </list>
     </option>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2560" />
-    <option name="height" value="1323" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -177,15 +172,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CASino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CASino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../m2m-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="project.settings.patched" value="true" />
   </component>
@@ -323,6 +328,9 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -333,30 +341,32 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="11039a80-7bcb-4eb5-8efe-46a1da8d7f83" name="Default" comment="" />
       <created>1413817733487</created>
+      <option name="number" value="Default" />
       <updated>1413817733487</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1323" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -379,13 +389,85 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/casino/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="893">
+          <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../m2m-web/app/controllers/mfa_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1482" max-vertical-offset="4883">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../m2m-web/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2242" max-vertical-offset="2755">
+          <caret line="118" column="59" selection-start-line="118" selection-start-column="59" selection-end-line="118" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="1349">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../m2m-web/app/controllers/api/v8/relying_party_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1444">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/processors/casino/acceptto_mfa_authentication_acceptor_processor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1159">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/listeners/casino/login_credential_acceptor_listener.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1121">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../m2m-web/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2774">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/listeners/casino/acceptto_mfa_authentication_acceptor_listener.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/processors/casino/processor.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.047578588" vertical-offset="0" max-vertical-offset="1177">
           <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -393,7 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32666665" vertical-offset="0" max-vertical-offset="1200">
           <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -401,7 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4717776" vertical-offset="784" max-vertical-offset="1988">
           <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -409,14 +489,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25947767" vertical-offset="0" max-vertical-offset="2660">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="13" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/processors/casino/acceptto_mfa_authentication_acceptor_processor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="1736">
-          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1159">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -479,12 +558,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../m2m-web/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78867924" vertical-offset="2677" max-vertical-offset="3472">
+        <state vertical-scroll-proportion="0.28010824" vertical-offset="2035" max-vertical-offset="2774">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/casino.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59133965" vertical-offset="209" max-vertical-offset="950">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
