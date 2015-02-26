@@ -19,6 +19,12 @@ class CASino::AccepttoMfaAuthenticationAcceptorProcessor < CASino::Processor
     p "params[:tgt] is #{params[:tgt]}"
     tgt = find_valid_ticket_granting_ticket(params[:tgt], user_agent, true)
     p "TGT is #{tgt}"
+
+    #dirty hack to solve a weird bug
+    unless params["amp;service"].blank?
+      params[:service] = params["amp;service"]
+    end
+
     if tgt.nil?
       @listener.user_not_logged_in
     else
@@ -30,6 +36,13 @@ class CASino::AccepttoMfaAuthenticationAcceptorProcessor < CASino::Processor
 	    p "******************************************"
 	    p "Channel in proccessor is: #{channel}"
 	    p "******************************************"
+
+      unless params[:service].blank?
+        p "******************************************"
+        p "Service is #{params["service"]}"
+        p "******************************************"
+      end
+
 	    session[:channel] = '' unless session.nil?
       validation_result = check(tgt.acceptto_authentication_token, channel)
       if validation_result.success?
