@@ -4,9 +4,7 @@
     <list default="true" id="11039a80-7bcb-4eb5-8efe-46a1da8d7f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/Gemfile.lock" afterPath="$PROJECT_DIR$/../acceptto-website/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/Gemfile" afterPath="$PROJECT_DIR$/../acceptto-website/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/api/v8/device_controller.rb" afterPath="$PROJECT_DIR$/../m2m-web/app/controllers/api/v8/device_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../acceptto-website/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/../acceptto-website/app/controllers/sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../m2m-web/app/controllers/admin_users/sessions_controller.rb" afterPath="$PROJECT_DIR$/../m2m-web/app/controllers/admin_users/sessions_controller.rb" />
     </list>
     <ignored path="CASino.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +79,8 @@
       <file leaf-file-name="login_credential_acceptor_listener.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/listeners/casino/login_credential_acceptor_listener.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40260798">
-              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.46454766">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="e#932#989#0" expanded="true" />
                 <element signature="e#991#1050#0" expanded="true" />
@@ -528,12 +526,12 @@
       <updated>1413817733487</updated>
       <workItem from="1443433083941" duration="928000" />
       <workItem from="1443533096795" duration="34000" />
-      <workItem from="1443533360298" duration="59000" />
+      <workItem from="1443533360298" duration="400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1021000" />
+    <option name="totallyTimeSpent" value="1362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1350" extended-state="6" />
@@ -967,8 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/listeners/casino/login_credential_acceptor_listener.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40260798">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.46454766">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="e#932#989#0" expanded="true" />
             <element signature="e#991#1050#0" expanded="true" />
