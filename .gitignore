@@ -28,3 +28,4 @@
 /spec/dummy/db/*.sqlite3
 
 .project
+.idea

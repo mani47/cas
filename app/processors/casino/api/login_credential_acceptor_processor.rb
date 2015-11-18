@@ -27,6 +27,7 @@ class CASino::API::LoginCredentialAcceptorProcessor < CASino::Processor
   end
 
   private
+
   def validate_login_data
     @authentication_result = validate_login_credentials(@login_data[:username], @login_data[:password])
   end
