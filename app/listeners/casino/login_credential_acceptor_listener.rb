@@ -16,9 +16,27 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
   end
   
   def acceptto_authentication_pending(ticket_granting_ticket, service)
+    p "************************************************************"
+    p "inside acceptto_authentication_pending ..........."
+    p "************************************************************"
+    response = RestClient.post "#{Rails.configuration.mfa_site}/api/v9/authenticate_with_options",
+                               { 'message' => I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"),
+                                 'email' => ticket_granting_ticket.user.username,
+                                 'uid' => Rails.configuration.mfa_app_uid,
+                                 'secret' => Rails.configuration.mfa_app_secret,
+                                 'timeout' => '60',
+                                 'type' => I18n.t("acceptto_mfa_authenticator.mfa_authetication_type"),
+                                 'ip_address' => @controller.request.ip,
+                                 'remote_ip_address' => @controller.request.remote_ip
+                               },
+                               :content_type => :json, :accept => :json
+    resp = JSON.parse(response.body)
+    @channel = resp['channel']
     assign(:ticket_granting_ticket, ticket_granting_ticket.ticket)
-    acceptto = Acceptto::Client.new(Rails.configuration.mfa_app_uid, Rails.configuration.mfa_app_secret, '')
-    @channel = acceptto.authenticate(ticket_granting_ticket.acceptto_authentication_token, I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"), I18n.t("acceptto_mfa_authenticator.mfa_authetication_type"), {ip_address: @controller.request.ip, remote_ip_address: @controller.request.remote_ip})
+
+    # acceptto = Acceptto::Client.new(Rails.configuration.mfa_app_uid, Rails.configuration.mfa_app_secret, '')
+    # @channel = acceptto.authenticate(ticket_granting_ticket.acceptto_authentication_token, I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"), I18n.t("acceptto_mfa_authenticator.mfa_authetication_type"), {ip_address: @controller.request.ip, remote_ip_address: @controller.request.remote_ip})
+
     @controller.session[:channel] = @channel
     callback_url = "#{@controller.request.protocol + @controller.request.host_with_port}/cass/mfa/check?tgt=#{ticket_granting_ticket.ticket}"
     callback_url = "#{callback_url}&service=#{service}" unless service.blank?

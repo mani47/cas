@@ -4,7 +4,6 @@ class CreateCasinoAccepttoAuthenticators < ActiveRecord::Migration
       t.integer :user_id
       t.string :token
       t.boolean :authenticated
-
       t.timestamps
     end
   end

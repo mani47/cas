@@ -44,7 +44,7 @@ class CASino::AccepttoMfaAuthenticationAcceptorProcessor < CASino::Processor
       end
 
 	    session[:channel] = '' unless session.nil?
-      validation_result = check(tgt.acceptto_authentication_token, channel)
+      validation_result = check(tgt, channel)
       if validation_result.success?
         tgt.awaiting_acceptto_authentication = false
         tgt.save!

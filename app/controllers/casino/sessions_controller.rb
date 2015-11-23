@@ -15,10 +15,9 @@ class CASino::SessionsController < CASino::ApplicationController
     unless params[:username].include?('@')
       params[:username] = "#{params[:username]}@aetna.com"
     end
-
-    if params[:username].include?('@aetna.com')
-      params[:password] = Digest::SHA1.hexdigest(params[:username].gsub('@aetna.com', ''))
-    end
+    p "***********************************************************************"
+    p "Processing CASino::SessionsController#create with params: #{params}"
+    p "***********************************************************************"
     processor(:LoginCredentialAcceptor).process(params, request.user_agent)
   end
 

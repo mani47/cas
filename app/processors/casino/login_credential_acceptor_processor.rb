@@ -25,7 +25,15 @@ class CASino::LoginCredentialAcceptorProcessor < CASino::Processor
     @params = params || {}
     @user_agent = user_agent
     if login_ticket_valid?(@params[:lt])
-      authenticate_user
+      authentication_result = {:authenticator=>"acceptto_mfa_database",
+                               :user_data=>{:username=>params[:username],
+                                            :extra_attributes=>{:email=>params[:username],
+                                                                :fullname=>params[:username]
+                                            }
+                               }
+      }
+      user_logged_in(authentication_result)
+      #authenticate_user()
     else
       @listener.invalid_login_ticket(acquire_login_ticket)
     end
@@ -43,6 +51,9 @@ class CASino::LoginCredentialAcceptorProcessor < CASino::Processor
 
   def user_logged_in(authentication_result)
     long_term = @params[:rememberMe]
+    p "***********************************************************"
+    p "authentication result: #{authentication_result}"
+    p "***********************************************************"
     ticket_granting_ticket = acquire_ticket_granting_ticket(authentication_result, @user_agent, long_term)
     if ticket_granting_ticket.awaiting_two_factor_authentication?
       @listener.two_factor_authentication_pending(ticket_granting_ticket.ticket)
