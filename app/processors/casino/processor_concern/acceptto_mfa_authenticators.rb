@@ -15,7 +15,9 @@ module CASino
 
         response = RestClient.post "#{Rails.configuration.mfa_site}/api/v9/check",
                                    { 'channel' => channel,
-                                     'email' => tgt.user.username
+                                     'email' => tgt.user.username,
+                                     'uid' => Rails.configuration.mfa_app_uid,
+                                     'secret' => Rails.configuration.mfa_app_secret,
                                    },
                                    :content_type => :json, :accept => :json
         resp = JSON.parse(response.body)
