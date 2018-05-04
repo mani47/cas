@@ -14,7 +14,7 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
     assign(:ticket_granting_ticket, ticket_granting_ticket)
     @controller.render 'validate_otp'
   end
-  
+
   def acceptto_authentication_pending(ticket_granting_ticket, service)
     p "************************************************************"
     p "inside acceptto_authentication_pending ..........."
@@ -30,6 +30,9 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
                                  'remote_ip_address' => @controller.request.remote_ip
                                },
                                :content_type => :json, :accept => :json
+   p "************************************************************"
+   p "Called: #{Rails.configuration.mfa_site}/api/v9/authenticate_with_options, response: #{response.body}"
+   p "************************************************************"
     resp = JSON.parse(response.body)
     @channel = resp['channel']
     assign(:ticket_granting_ticket, ticket_granting_ticket.ticket)
