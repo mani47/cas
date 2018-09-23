@@ -5,7 +5,7 @@ class CASino::ApplicationController < ::ApplicationController
   include ApplicationHelper
 
   layout 'casino'
-  before_filter :set_locale
+  before_action :set_locale
 
   unless Rails.env.development?
     rescue_from ActionView::MissingTemplate, with: :missing_template
