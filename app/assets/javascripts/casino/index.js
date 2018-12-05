@@ -12,5 +12,5 @@
 //
 //= require jquery-min
 //= require bootstrap-sprockets
-//= require cas-sessions
+//= require sessions
 
