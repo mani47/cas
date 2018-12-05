@@ -12,5 +12,5 @@
 //
 //= require jquery-min
 //= require bootstrap-sprockets
-//= require sessions
+//= require casino/sessions
 
