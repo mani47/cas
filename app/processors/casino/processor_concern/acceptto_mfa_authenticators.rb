@@ -14,12 +14,8 @@ module CASino
         p "inside AccepttoMfaAuthenticators.check"
         p "*****************************************************************"
 
-        payload = { 'channel' => channel,
-                                     'email' => tgt.user.username,
-                                     'uid' => Rails.configuration.mfa_app_uid,
-                                     'secret' => Rails.configuration.mfa_app_secret,
-                                   }
-        url = "#{Rails.configuration.mfa_site}/api/v9/check",
+        payload = { 'channel' => channel, 'email' => tgt.user.username, 'uid' => Rails.configuration.mfa_app_uid, 'secret' => Rails.configuration.mfa_app_secret }
+        url = "#{Rails.configuration.mfa_site}/api/v9/check"
         response = RestClient.post url, payload.to_json, {content_type: :json, accept: :json }
         resp = JSON.parse(response.body)
 
