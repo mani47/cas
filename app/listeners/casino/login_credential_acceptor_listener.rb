@@ -20,8 +20,8 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
     p "************************************************************"
     p "inside acceptto_authentication_pending ..........."
     p "************************************************************"
-    response = RestClient.post "#{Rails.configuration.mfa_site}/api/v9/authenticate_with_options",
-                               { 'message' => I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"),
+    url = "#{Rails.configuration.mfa_site}/api/v9/authenticate_with_options"
+    payload = { 'message' => I18n.t("acceptto_mfa_authenticator.wishing_to_authorize"),
                                  'email' => ticket_granting_ticket.user.username,
                                  'uid' => Rails.configuration.mfa_app_uid,
                                  'secret' => Rails.configuration.mfa_app_secret,
@@ -29,8 +29,8 @@ class CASino::LoginCredentialAcceptorListener < CASino::Listener
                                  'type' => I18n.t("acceptto_mfa_authenticator.mfa_authetication_type"),
                                  'ip_address' => @controller.request.ip,
                                  'remote_ip_address' => @controller.request.remote_ip
-                               },
-                               :content_type => :json, :accept => :json
+                               }
+    response = RestClient.post url, payload.to_json, {content_type: :json, accept: :json}
     resp = JSON.parse(response.body)
     @channel = resp['channel']
     assign(:ticket_granting_ticket, ticket_granting_ticket.ticket)
