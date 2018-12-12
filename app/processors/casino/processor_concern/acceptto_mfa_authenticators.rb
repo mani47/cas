@@ -1,4 +1,5 @@
 require 'addressable/uri'
+require 'rest-client'
 
 module CASino
   module ProcessorConcern

@@ -1,4 +1,5 @@
 require_relative 'listener'
+require 'rest-client'
 
 class CASino::LoginCredentialAcceptorListener < CASino::Listener
   def user_logged_in(url, ticket_granting_ticket, cookie_expiry_time = nil)

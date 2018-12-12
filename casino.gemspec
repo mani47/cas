@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'factory_girl', '~> 4.1'
   s.add_development_dependency 'webmock', '~> 1.9'
   s.add_development_dependency 'coveralls', '~> 0.7'
-  s.add_development_dependency 'rest_client'
+  s.add_development_dependency 'rest_client', '~> 2.0'
 
   s.add_runtime_dependency 'rails', '>= 4.1.0', '< 4.3.0'
   s.add_runtime_dependency 'sass-rails', '>= 4.0.0'
